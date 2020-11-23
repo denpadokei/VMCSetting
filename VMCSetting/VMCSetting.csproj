@@ -99,6 +99,22 @@
   <ItemGroup>
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
+    <Compile Include="uOsc\Scripts\Core\Bundle.cs" />
+    <Compile Include="uOsc\Scripts\Core\DotNet\Thread.cs" />
+    <Compile Include="uOsc\Scripts\Core\DotNet\Udp.cs" />
+    <Compile Include="uOsc\Scripts\Core\Message.cs" />
+    <Compile Include="uOsc\Scripts\Core\Parser.cs" />
+    <Compile Include="uOsc\Scripts\Core\Reader.cs" />
+    <Compile Include="uOsc\Scripts\Core\Thread.cs" />
+    <Compile Include="uOsc\Scripts\Core\Timestamp.cs" />
+    <Compile Include="uOsc\Scripts\Core\Udp.cs" />
+    <Compile Include="uOsc\Scripts\Core\Util.cs" />
+    <Compile Include="uOsc\Scripts\Core\Uwp\Thread.cs" />
+    <Compile Include="uOsc\Scripts\Core\Uwp\Udp.cs" />
+    <Compile Include="uOsc\Scripts\Core\Writer.cs" />
+    <Compile Include="uOsc\Scripts\ReciveMessageArgs.cs" />
+    <Compile Include="uOsc\Scripts\uOscClient.cs" />
+    <Compile Include="uOsc\Scripts\uOscServer.cs" />
     <Compile Include="Views\VMCSettingViewController.cs" />
     <Compile Include="VMCSettingController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +128,28 @@
     <EmbeddedResource Include="Views\VMCSettingViewController.bsml">
       <DependentUpon>VMCSettingViewController.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="uOsc\Scripts\Core.meta" />
+    <None Include="uOsc\Scripts\Core\Bundle.cs.meta" />
+    <None Include="uOsc\Scripts\Core\DotNet.meta" />
+    <None Include="uOsc\Scripts\Core\DotNet\Thread.cs.meta" />
+    <None Include="uOsc\Scripts\Core\DotNet\Udp.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Message.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Parser.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Reader.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Thread.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Timestamp.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Udp.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Util.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Uwp.meta" />
+    <None Include="uOsc\Scripts\Core\Uwp\Thread.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Uwp\Udp.cs.meta" />
+    <None Include="uOsc\Scripts\Core\Writer.cs.meta" />
+    <None Include="uOsc\Scripts\package.json" />
+    <None Include="uOsc\Scripts\package.json.meta" />
+    <None Include="uOsc\Scripts\uOSC.asmdef" />
+    <None Include="uOsc\Scripts\uOSC.asmdef.meta" />
+    <None Include="uOsc\Scripts\uOscClient.cs.meta" />
+    <None Include="uOsc\Scripts\uOscServer.cs.meta" />
     <None Include="VMCSetting.csproj.user" Condition="Exists('VMCSetting.csproj.user')" />
   </ItemGroup>
   <ItemGroup>

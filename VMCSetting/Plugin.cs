@@ -8,6 +8,8 @@ using IPA.Config.Stores;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using IPALogger = IPA.Logging.Logger;
+using BeatSaberMarkupLanguage.Settings;
+using VMCSetting.Views;
 
 namespace VMCSetting
 {
@@ -48,7 +50,7 @@ namespace VMCSetting
         {
             Log.Debug("OnApplicationStart");
             new GameObject("VMCSettingController").AddComponent<VMCSettingController>();
-
+            BSMLSettings.instance.AddSettingsMenu("VMC Setting", VMCSettingViewController.instance.ResourceName, VMCSettingViewController.instance);
         }
 
         [OnExit]
