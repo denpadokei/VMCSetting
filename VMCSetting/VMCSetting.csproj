@@ -45,6 +45,11 @@
       <HintPath>$(BeatSaberDir)\Plugins\BSML.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="LIV, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\LIV.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -78,6 +83,11 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+      <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\UnityEngine.UI.dll</HintPath>
@@ -115,6 +125,8 @@
     <Compile Include="uOsc\Scripts\ReciveMessageArgs.cs" />
     <Compile Include="uOsc\Scripts\uOscClient.cs" />
     <Compile Include="uOsc\Scripts\uOscServer.cs" />
+    <Compile Include="Views\TopViewController.cs" />
+    <Compile Include="Views\VMCFlowCoordinator.cs" />
     <Compile Include="Views\VMCSettingViewController.cs" />
     <Compile Include="VMCSettingController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +162,9 @@
     <None Include="uOsc\Scripts\uOSC.asmdef.meta" />
     <None Include="uOsc\Scripts\uOscClient.cs.meta" />
     <None Include="uOsc\Scripts\uOscServer.cs.meta" />
+    <EmbeddedResource Include="Views\TopViewController.bsml">
+      <DependentUpon>TopViewController.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="VMCSetting.csproj.user" Condition="Exists('VMCSetting.csproj.user')" />
   </ItemGroup>
   <ItemGroup>

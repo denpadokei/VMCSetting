@@ -12,7 +12,8 @@ using uOSC;
 
 namespace VMCSetting.Views
 {
-    internal class VMCSettingViewController : PersistentSingleton<VMCSettingViewController>, INotifyPropertyChanged
+    [HotReload]
+    internal class VMCSettingViewController : BSMLAutomaticViewController
     {
         // For this method of setting the ResourceName, this class must be the first class in the file.
         public string ResourceName => string.Join(".", GetType().Namespace, GetType().Name);
@@ -50,9 +51,6 @@ namespace VMCSetting.Views
                 this.NotifyPropertyChanged();
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         void Awake()
         {
             this.client = this.gameObject.AddComponent<uOscClient>();
@@ -91,16 +89,6 @@ namespace VMCSetting.Views
             this.NotifyText = "Calibrating...";
             await Task.Delay(2000);
             this.NotifyText = "Compleate";
-        }
-
-        void OnPropertyChanged(PropertyChangedEventArgs e)
-        {
-            this.PropertyChanged?.Invoke(this, e);
-        }
-
-        void NotifyPropertyChanged([CallerMemberName]string member = null)
-        {
-            this.OnPropertyChanged(new PropertyChangedEventArgs(member));
         }
     }
 }

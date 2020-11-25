@@ -10,6 +10,8 @@ using UnityEngine;
 using IPALogger = IPA.Logging.Logger;
 using BeatSaberMarkupLanguage.Settings;
 using VMCSetting.Views;
+using BeatSaberMarkupLanguage;
+using BeatSaberMarkupLanguage.MenuButtons;
 
 namespace VMCSetting
 {
@@ -19,6 +21,8 @@ namespace VMCSetting
     {
         internal static Plugin Instance { get; private set; }
         internal static IPALogger Log { get; private set; }
+
+        VMCFlowCoordinator vMCFlowCoordinator;
 
         [Init]
         /// <summary>
@@ -50,7 +54,8 @@ namespace VMCSetting
         {
             Log.Debug("OnApplicationStart");
             new GameObject("VMCSettingController").AddComponent<VMCSettingController>();
-            BSMLSettings.instance.AddSettingsMenu("VMC Setting", VMCSettingViewController.instance.ResourceName, VMCSettingViewController.instance);
+            var button = new MenuButton("VMC SETTING", this.ShowFlowCoordinator);
+            MenuButtons.instance.RegisterButton(button);
         }
 
         [OnExit]
@@ -58,6 +63,14 @@ namespace VMCSetting
         {
             Log.Debug("OnApplicationQuit");
 
+        }
+
+        private void ShowFlowCoordinator()
+        {
+            if (this.vMCFlowCoordinator == null) {
+                this.vMCFlowCoordinator = BeatSaberUI.CreateFlowCoordinator<VMCFlowCoordinator>();
+            }
+            BeatSaberUI.MainFlowCoordinator.PresentFlowCoordinator(this.vMCFlowCoordinator);
         }
     }
 }
