@@ -80,7 +80,7 @@ namespace VMCSetting.Views
 
         void RequestCalibrate()
         {
-            this.client.Send("/VMC/Ext/Set/Calib/Ready", null);
+            this.client.Send("/VMC/Ext/Set/Calib/Ready", "");
         }
 
         async Task ExecuteCalibrate()
