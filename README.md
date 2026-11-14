@@ -1,6 +1,5 @@
 # VMCSetting
 
-[![Build and Release](https://github.com/denpadokei/VMCSetting/actions/workflows/build-and-release.yml/badge.svg)](https://github.com/denpadokei/VMCSetting/actions/workflows/build-and-release.yml)
 
 Beat Saber の中から VMCProtocol でキャリブレーションを要求する MOD です。三人称視点の鏡プレビューが付いているので、kawaii ムーブの練習にも使えます。
 
@@ -46,7 +45,8 @@ dotnet build .\VMCSetting\VMCSetting.csproj -c Release
 
 `BeatSaberDir` に Beat Saber のインストール先を設定すると、ゲームの参照アセンブリを解決できます。
 
-GitHub Actions の `build-and-release.yml` が push ごとにビルドし、`X.X.X` 形式のタグを push するとリリースを作成します。
+
+> GitHub Actions によるビルドは未設定です。コードが現在の FlowCoordinator API と一致せず、manifest の対象バージョン (1.11.1) 向けの参照アセンブリではコンパイルできないため。
 
 ## ライセンス
 
